@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block conteudo %}
+<body>
+<form method="post" enctype="multipart/form-data">
+
+    {% csrf_token %}
+    {{form_diarista | crispy}}
+
+    <button type="submit">Cadastrar</button>
+</form>
+{% endblock conteudo %}
